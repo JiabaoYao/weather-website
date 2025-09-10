@@ -22,7 +22,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error.type, undefined)
         } else {
-            const str = body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. It feeks like " + body.current.feelslike + " degrees out."
+            const str = body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. It feeks like " + body.current.feelslike + " degrees out. The humidity is " + body.current.humidity + "%."
             callback(undefined, str)
         }
     })
